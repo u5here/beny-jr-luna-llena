@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beny Jr - Luna Llena</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#05060f;display:flex;justify-content:center;padding:20px;min-height:100vh}
+.wrap{font-family:'Space Mono',monospace;background:#05060f;border-radius:10px;overflow:hidden;max-width:900px;width:100%}
+.sky{position:relative;width:100%;height:160px;background:linear-gradient(180deg,#02030a 0%,#090c1c 60%,#12162e 100%);overflow:hidden}
+.star{position:absolute;border-radius:50%;background:#fff;animation:twinkle 2s infinite alternate}
+@keyframes twinkle{0%{opacity:.1}100%{opacity:1}}
+.moon-wrap{position:absolute;top:15px;left:50%;transform:translateX(-50%);animation:moonrise 2s ease-out both}
+@keyframes moonrise{from{transform:translateX(-50%) translateY(60px);opacity:0}to{transform:translateX(-50%) translateY(0);opacity:1}}
+.moon{width:85px;height:85px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fffde0 0%,#f5d84a 35%,#d4a820 65%,#b08010 100%);box-shadow:0 0 40px 16px rgba(240,210,60,.18),0 0 80px 30px rgba(240,200,40,.08);position:relative}
+.crater{position:absolute;border-radius:50%;background:rgba(0,0,0,.12)}
+.city{position:absolute;bottom:0;left:0;right:0;height:38px}
+.content{padding:1.2rem 1.5rem 1.5rem;background:#05060f}
+.top-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;border-bottom:1px solid #111627;padding-bottom:.7rem}
+.artist-lbl{font-size:.65rem;letter-spacing:4px;color:#4a5070}
+.album-lbl{font-size:.58rem;letter-spacing:2px;color:#2a3050;border:1px solid #1a2035;border-radius:4px;padding:2px 8px}
+.main-layout{display:flex;gap:1.2rem;align-items:flex-start}
+.lyrics-col{flex:1;min-width:0}
+.song-title{font-size:.95rem;font-weight:700;color:#f0d060;letter-spacing:2px;margin-bottom:.15rem;text-shadow:0 0 20px rgba(240,210,60,.3)}
+.song-sub{font-size:.55rem;letter-spacing:3px;color:#2e3a5a;margin-bottom:.9rem}
+.line{font-size:.68rem;line-height:1.9;color:#b0b8d0;display:block;min-height:1.2rem}
+.line.hook{color:#f0d060;font-weight:700}
+.line.baila{color:#7090ff}
+.cursor{display:inline-block;width:2px;height:.68rem;background:#f0d060;vertical-align:middle;margin-left:1px;animation:blink .65s infinite}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.sep{width:1px;background:linear-gradient(to bottom,transparent,#1e2540,transparent);align-self:stretch;flex-shrink:0}
+.photo-col{flex-shrink:0;width:155px;display:flex;flex-direction:column;align-items:center;gap:.5rem}
+.beny-photo{width:145px;height:auto;border-radius:6px;border:1px solid #1a2035}
+.photo-name{font-size:.5rem;letter-spacing:3px;color:#3a4060;text-align:center}
+.footer{margin-top:1rem;padding-top:.7rem;border-top:1px solid #0e1120;display:flex;justify-content:space-between;align-items:center}
+.dots{display:flex;gap:5px}
+.dot{width:5px;height:5px;border-radius:50%;background:#111627;animation:pulse 1.5s infinite}
+.dot:nth-child(2){animation-delay:.25s}.dot:nth-child(3){animation-delay:.5s}
+@keyframes pulse{0%,100%{background:#111627;transform:scale(1)}50%{background:#f0d060;transform:scale(1.3)}}
+.lbl{font-size:.5rem;letter-spacing:3px;color:#1e2640}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="sky" id="sky">
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,rgba(240,210,60,.1) 0%,transparent 70%)"></div>
+    <div class="moon-wrap">
+      <div class="moon">
+        <div class="crater" style="width:11px;height:11px;top:16px;left:20px"></div>
+        <div class="crater" style="width:7px;height:7px;top:38px;left:46px"></div>
+        <div class="crater" style="width:5px;height:5px;top:26px;left:34px"></div>
+      </div>
+    </div>
+    <svg class="city" viewBox="0 0 680 38" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <rect fill="#05060f" x="0" y="10" width="14" height="28"/><rect fill="#05060f" x="12" y="5" width="10" height="33"/><rect fill="#05060f" x="20" y="14" width="18" height="24"/><rect fill="#05060f" x="60" y="2" width="12" height="36"/><rect fill="#05060f" x="136" y="4" width="14" height="34"/><rect fill="#05060f" x="198" y="1" width="13" height="37"/><rect fill="#05060f" x="272" y="0" width="16" height="38"/><rect fill="#05060f" x="331" y="3" width="12" height="35"/><rect fill="#05060f" x="446" y="2" width="16" height="36"/><rect fill="#05060f" x="527" y="0" width="14" height="38"/><rect fill="#05060f" x="655" y="4" width="25" height="34"/>
+    </svg>
+  </div>
+  <div class="content">
+    <div class="top-bar">
+      <div class="artist-lbl">BENY JR</div>
+      <div class="album-lbl">ANTI SOCIAL COOL KID · 2024</div>
+    </div>
+    <div class="main-layout">
+      <div class="lyrics-col">
+        <div class="song-title">LUNA LLENA</div>
+        <div class="song-sub">RAP ESPAÑOL · BARCELONA</div>
+        <div id="lbox"></div>
+      </div>
+      <div class="sep"></div>
+      <div class="photo-col">
+        <img class="beny-photo" src="https://labiode.com/wp-content/uploads/2022/01/Beny-Jr-trapero.jpg" alt="Beny Jr"/>
+        <div class="photo-name">// BENY JR //</div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+      <div class="lbl">LUNA, DIME QUE TU LA VES</div>
+    </div>
+  </div>
+</div>
+<script>
+const sky=document.getElementById('sky');
+for(let i=0;i<55;i++){const s=document.createElement('div');s.className='star';const sz=Math.random()*2+.5;s.style.cssText='width:'+sz+'px;height:'+sz+'px;top:'+Math.random()*85+'%;left:'+Math.random()*100+'%;animation-delay:'+Math.random()*4+'s;animation-duration:'+(1.2+Math.random()*2.5)+'s';sky.appendChild(s);}
+const lines=[{t:'Yo quiero llevarte conmigo de paseo,',h:0},{t:'pero ella me dice que solo los feos',h:0},{t:'Si sabes de sobra que no baboseo,',h:0},{t:'pero es que en tu cara te noto el deseo',h:0},{t:'Pero esa sabe, soy bandido,',h:0},{t:'dice que mi valia no le asusta',h:0},{t:'Nunca me ven, no ves al submarino,',h:0},{t:'bajo del agua las balas no escuchan',h:0},{t:'Luna, dime que seguro que tu la ves',h:1},{t:'Si me piensa un poco en la noche',h:1},{t:'o soy yo solo el que esta al reves',h:1},{t:'Oye Luna, porque yo ya no se',h:1},{t:'Compre un ticket, perdi mi turno,',h:1},{t:'se paso y no lo recorde',h:1},{t:'Solitario, me creo el Che',h:0},{t:'El amor, historia de anime, yeah',h:0},{t:'Baila, bailame, como tu son pocas',h:2},{t:'Baila, bailame, le bese en la boca',h:2},{t:'Luna, dime que seguro que tu la ves',h:1},{t:'Si me piensa un poco en la noche',h:1},{t:'o soy yo solo el que esta al reves',h:1},{t:'se paso y no lo recorde',h:1}];
+const lbox=document.getElementById('lbox');
+async function type(el,txt,spd){return new Promise(r=>{let i=0;const c=document.createElement('span');c.className='cursor';el.appendChild(c);const iv=setInterval(()=>{if(i<txt.length){c.before(document.createTextNode(txt[i++]));}else{clearInterval(iv);c.remove();r();}},spd);});}
+async function run(){await new Promise(r=>setTimeout(r,2000));for(const ln of lines){const el=document.createElement('span');el.className=ln.h===1?'line hook':ln.h===2?'line baila':'line';lbox.appendChild(el);await type(el,ln.t,ln.h===1?20:26);await new Promise(r=>setTimeout(r,55));}}
+run();
+</script>
+</body>
+</html>
